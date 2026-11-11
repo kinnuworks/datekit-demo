@@ -1,5 +1,6 @@
-import calendar
 from datetime import date
+
+_DAYS = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
 
 
 def parse_iso(s: str) -> date:
@@ -9,7 +10,7 @@ def parse_iso(s: str) -> date:
 
 
 def days_in_month(year: int, month: int) -> int:
-    return calendar.monthrange(year, month)[1]
+    return _DAYS[month - 1]
 
 
 def add_months(d: date, n: int) -> date:
