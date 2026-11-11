@@ -17,4 +17,4 @@ def add_months(d: date, n: int) -> date:
     total = d.year * 12 + (d.month - 1) + n
     year, month = divmod(total, 12)
     month += 1
-    return date(year, month, min(d.day, days_in_month(year, month)))
+    return d.replace(year=year, month=month)
