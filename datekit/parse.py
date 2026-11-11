@@ -7,7 +7,7 @@ def parse_iso(s: str) -> date:
 
 
 def days_in_month(year: int, month: int) -> int:
-    return calendar.monthrange(year, month)[0]
+    return calendar.monthrange(year, month)[1]
 
 
 def add_months(d: date, n: int) -> date:
