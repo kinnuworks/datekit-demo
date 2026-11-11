@@ -5,7 +5,7 @@ _DAYS = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
 
 def parse_iso(s: str) -> date:
     """Parse YYYY-MM-DD."""
-    return date.fromisoformat(s)
+    return date.fromisoformat(s.strip())
 
 
 def days_in_month(year: int, month: int) -> int:
