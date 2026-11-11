@@ -10,6 +10,8 @@ def parse_iso(s: str) -> date:
 
 
 def days_in_month(year: int, month: int) -> int:
+    if month == 2 and (year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)):
+        return 29
     return _DAYS[month - 1]
 
 
